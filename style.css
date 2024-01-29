@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    background-image: url(back.png);
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+nav{
+    height: 80px;
+    width: 100%;
+}
+label.logo{
+    line-height: 110px;
+    padding: 0 40px;
+}
+label.logo img{
+    height: 25px;
+}
+nav ul{
+    float: right;
+    margin-right: 60px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+    
+}
+nav ul li a{
+    color: #fff;
+    font-size: 17px;
+    padding: 0px 10px;
+    border-radius: 3px;
+}
+/* a.active,a:hover{
+    transition: .5s;
+} */
+
+.active{
+    border: 1px solid transparent;
+    padding: 6px 13px;
+    border-radius: 10px;
+    background:linear-gradient(#16143d,#16143d)padding-box,linear-gradient(to right,#E562F1,#542ab1) border-box;
+    box-shadow: -10px -10px 15px -10px #e562f1bc,inset 2px 3px 25px #e562f19a;
+}
+a:hover{
+    border: 1px solid transparent;
+    padding: 6px 13px;
+    border-radius: 10px;
+    background:linear-gradient(#16143d,#16143d)padding-box,linear-gradient(to right,#E562F1,#542ab1) border-box;
+    box-shadow: -10px -10px 15px -10px #e562f1bc,inset 2px 3px 25px #e562f19a;
+    transition:.3s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width: 952px){
+    nav ul li a{
+        font-size: 16px;
+    }    
+}
+@media (max-width: 862px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all  .5s;
+        
+    }
+    nav ul li{
+        display: block;
+        margin: 40px 0;
+        line-height: 30px;
+        
+    }
+    nav ul li a{
+        font-size: 20px;
+      
+    }
+    a:hover,a.active{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ul{
+        left: 0;
+    }
+    .second{
+        position: relative;
+        z-index: -1;
+    }
+}
+.main{
+    height: calc(100vh - 80px);
+    width: 100%;
+}
+
+.container{
+display: flex;
+height: 100%;
+width: 100%;
+
+}
+.first{
+    height: 100%;
+    width: 60%;
+    padding-left: 220px;
+    padding-top: 130px;
+}
+.first h1{
+    font-family: "Montserrat";
+font-size: 50px;
+font-style: normal;
+font-weight: 700;
+color: var(--General-Light-Red, #FFA3A3);
+text-shadow: 0px 2px 0px rgba(34, 34, 34, 0.10);
+margin-top: 15px;
+}
+.first h6 img{
+    height: 15px;
+    width: 15px;
+}
+.first h6{
+    color: #fff;
+font-family: "Raleway";
+font-weight: 500;
+font-size: 15px;
+}
+.first p{
+    margin-top: 30px;
+    font-family: "Raleway";
+    font-weight: 400;
+    font-size: 22px;
+    color: #fff;
+}
+.first a{
+    font-family: "Raleway";
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--General-Light-Red, #FFA3A3);
+   
+}
+.first a img{
+    height: 18px;
+    width: 18px;
+    margin-top: 100px;
+    margin-left: 10px;
+    
+}
+
+.second{
+    height: 100%;
+    width: 40%;
+}
